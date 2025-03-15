@@ -9,145 +9,133 @@
         body {
             margin: 0;
             overflow: hidden;
-            width: 854px;
-            height: 480px;
+            width: 1280px; /* Resolución HD */
+            height: 720px; /* Resolución HD */
         }
 
+        /* Widget de SoundAlerts */
         #soundalerts {
             position: absolute;
-            top: 0;
-            left: 225px;
-            width: 80%;
-            height: 80%;
+            top: 0;  /* arriba y abajo  a menos es mas arriba */
+            left: 0px; /* lados   a mas se va para la derecha */
+            width: 100%; /* tamaño ancho */
+            height: 100%;  /* tamaño largo */
             z-index: 5;
-            transform: scale(1);
-        } 
+            transform: scale(0.8); /* transforma el tamaño */
+        }
 
+        /* Widget de Throne */
         #throne {
             position: absolute;
-            top: -80px;
-            left: 225px;
-            width: 50%; 
-            height: 50%; 
+            top: 150px;  /* arriba y abajo  a menos es mas arriba */
+            left: 200px; /* lados  a mas se va para la derecha */
+            width: 100%; /* tamaño ancho */
+            height: 100%;  /* tamaño largo */
             z-index: 2;
-            transform: scale(0.2); 
-            transform: translate(0,100%);
-        } 
-        
+            transform: scale(0.6); /* transforma el tamaño */
+        }
+
+        /* Meta de Elixir */
         #metaelixir {
             position: absolute;
-            top: 0px;
-            left: 680px;
-            width: 600px; 
-            height: 200px; 
-            overflow: hidden;
+            top: 36px;    /* arriba y abajo  a menos es mas arriba */
+            left: 520px;   /* lados   a mas se va para la derecha */
+            width: 500px; /* tamaño ancho */
+            height: 200px;  /* tamaño largo */
             z-index: 2;
-            transform: scale(0.3);  
-            transform-origin: 0 0;
+            transform: scale(0.5);  /* transforma el tamaño */
         }
-                
+
+        /* Meta de Mana */
         #metamana {
             position: absolute;
-            top: 0px;
-            left: 510px;
-            width: 600px; 
-            height: 200px; 
-            overflow: hidden;
+            top: 36px;  /* arriba y abajo  a menos es mas arriba */
+            left: 750px;  /* lados   a mas se va para la derecha */
+            width: 500px; /* tamaño ancho */
+            height: 200px;  /* tamaño largo */
             z-index: 1;
-            transform: scale(0.3);  
-            transform-origin: 0 0;
+            transform: scale(0.5);  /* transforma el tamaño */
         }
-                
+
+        /* Alertas de Botrix */
         #botrix-alerts {
             position: absolute;
-            top: 25px; 
-            left: 45%; 
-            width: 854px; 
-            height: 480px; 
+            top: 5px;  /* arriba y abajo  a menos es mas arriba */
+            left: 1%; /* lados   a mas se va para la derecha */
+            width: 1280px; /* tamaño ancho */
+            height: 720px; /* tamaño largo */
             z-index: 6;
-            transform: scale(0.4);  
-            transform-origin: 0 0;
+            transform: scale(0.6);  /* transforma el tamaño */
         }
 
+        /* Música */
         #musica {
             position: absolute;
-            top: -100px;
-            left: -90px;
-            width: 800px; 
-            height: 800px; 
-            overflow: hidden;
+            top: 0px; /* arriba y abajo  a menos es mas arriba */
+            left: 1000px; /* lados   a mas se va para la derecha */
+            width: 400px; /* tamaño ancho */
+            height: 900px;  /* tamaño largo */
             z-index: 7;
-            transform: scale(0.4);  
-            transform-origin: 0 0;
+            transform: scale(0.4);  /* transforma el tamaño */
         }
 
-        body {
-            margin: 0;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            width: 100vw;
-            height: 100vh;
-        }
-
-        /* Contenedor de chat y actividad */
+        /* Contenedor de Chat y Actividad */
         #chat-activity-container {
             display: flex;
             flex-direction: column;
-            width: 40%;
-            height: 100%;
+            width: 24%;  /* tamaño ancho */
+            height: 100%; /* tamaño largo */
             z-index: 2;
-            transform: scale(0.4); /* Aquí reducimos al 70% */
-            transform-origin: top left; /* Mantiene la posición */
-     position: absolute; 
-    top: 170px; /* Más abajo */
-    left: 230px; /* Más a la derecha */
-}
+            transform: scale(0.7);  /* transforma el tamaño */
+            position: absolute; 
+            top: 200px; /* arriba y abajo  a menos es mas arriba */
+            left: -50px; /* lados  a mas se va para la derecha */
+        }
 
-        /* Estilo para los iframes */
+        /* Estilo para iframes */
         iframe {
             border: none;
         }
 
-        /* Estilo para el iframe del chat */
+        /* Chat de Botrix */
         #botrix-chat {
-            width: 100%;
-            height: 60%; 
+            width: 100%; /* tamaño ancho */
+            height: 70%;  /* tamaño largo */
         }
 
-        /* Estilo para el iframe de actividad */
+        /* Actividad de Botrix */
         #botrix-activity {
-            width: 100%;
-            height: 40%; 
+            width: 100%; /* tamaño ancho */
+            height: 30%;   /* tamaño largo */
         }
     </style>
 </head>
 <body>
-<!-- Widget de SoundAlerts -->
-<iframe id="soundalerts" src="https://source.soundalerts.com/overlay/fd9ea406-efce-3885-b5f5-868305d5c76c/tZlhgHsRHOlCXqWyS577" frameborder="0" allow="autoplay"></iframe>
+    <!-- Widget de SoundAlerts -->
+    <iframe id="soundalerts" src="https://source.soundalerts.com/overlay/fd9ea406-efce-3885-b5f5-868305d5c76c/tZlhgHsRHOlCXqWyS577" frameborder="0" allow="autoplay"></iframe>
 
-<!-- Widget de meta de elixir botrix -->
-<iframe id="metaelixir" src="https://botrix.live/widgets/goals/elixir?tema=cleanradius&clientid=9Lpkd9wkOvH01DYtLKj3Ig&font=Arial&cantidad=5000&cantidadI=0&d=30&color=ff0088;ffffff&c=#ff0088#ffffff&texto=meta%20DE%20ELIXIR" frameborder="0" allow="autoplay"></iframe>    
-    
-<!-- Widget de meta de mana de Botrix-->
-<iframe id="metamana" src="https://botrix.live/widgets/goals/mana?tema=cleanradius&clientid=9Lpkd9wkOvH01DYtLKj3Ig&font=Arial&cantidad=50000&cantidadI=0&d=7&color=0073ff;ffffff&c=#0073ff#ffffff&texto=meta%20de%20MANA" frameborder="0" allow="autoplay"></iframe>
+    <!-- Widget de meta de elixir botrix -->
+    <iframe id="metaelixir" src="https://botrix.live/widgets/goals/elixir?tema=cleanradius&clientid=9Lpkd9wkOvH01DYtLKj3Ig&font=Arial&cantidad=5000&cantidadI=0&d=30&color=ff0088;ffffff&c=#ff0088#ffffff&texto=meta%20DE%20ELIXIR" frameborder="0" allow="autoplay"></iframe>    
 
-<!-- Widget de alertas de throne-->
-<iframe id="throne" src="https://throne.com/stream-alerts/6w1S6ns0Z9aWPlQE8OnnDT1ui0Q2" frameborder="0" allow="autoplay"></iframe>    
-    
-<!-- Widget de alertas de Botrix-->
-<iframe id="botrix-alerts" src="https://botrix.live/alerts?bid=hL4jXwuISOTVQTdQVTPC9A" frameborder="0" allow="autoplay"></iframe>
+    <!-- Widget de meta de mana de Botrix-->
+    <iframe id="metamana" src="https://botrix.live/widgets/goals/mana?tema=cleanradius&clientid=9Lpkd9wkOvH01DYtLKj3Ig&font=Arial&cantidad=50000&cantidadI=0&d=7&color=0073ff;ffffff&c=#0073ff#ffffff&texto=meta%20de%20MANA" frameborder="0" allow="autoplay"></iframe>
 
-<!-- Widget de música-->
-<iframe id="musica" src="https://myradioenvivo.pe/radio-disney-peru" frameborder="0" allow="autoplay"></iframe>    
-  
- <!-- Contenedor para los widgets de chat y actividad -->
-<div id="chat-activity-container">
-    <!-- Widget de chat de Botrix -->
-    <iframe id="botrix-chat" src="https://botrix.live/widgets/chat/?bid=hL4jXwuISOTVQTdQVTPC9A&bots=false&emojis=true&hideCommands=false&hideMessages=false&hideMessagesSeconds=14&fontSize=14&trovo=true&twitch=true&youtube=true&kick=false&livespace=false&platformIcon=true&theme=default"></iframe>
+    <!-- Widget de alertas de throne-->
+    <iframe id="throne" src="https://throne.com/stream-alerts/6w1S6ns0Z9aWPlQE8OnnDT1ui0Q2" frameborder="0" allow="autoplay"></iframe>    
 
-    <!-- Widget de actividad de Botrix -->
-    <iframe id="botrix-activity" src="https://botrix.live/widgets/activityfeed/"></iframe>
-</div>
+    <!-- Widget de alertas de Botrix-->
+    <iframe id="botrix-alerts" src="https://botrix.live/alerts?bid=hL4jXwuISOTVQTdQVTPC9A" frameborder="0" allow="autoplay"></iframe>
+
+    <!-- Widget de música-->
+    <iframe id="musica" src="https://myradioenvivo.pe/radio-disney-peru" frameborder="0" allow="autoplay"></iframe>    
+
+    <!-- Contenedor para Chat y Actividad -->
+    <div id="chat-activity-container">
+        <!-- Chat de Botrix -->
+        <iframe id="botrix-chat" src="https://botrix.live/widgets/chat/?bid=hL4jXwuISOTVQTdQVTPC9A&bots=false&emojis=true&hideCommands=false&hideMessages=false&hideMessagesSeconds=14&fontSize=14&trovo=true&twitch=true&youtube=true&kick=false&livespace=false&platformIcon=true&theme=default"></iframe>
+
+        <!-- Actividad de Botrix -->
+        <iframe id="botrix-activity" src="https://botrix.live/widgets/activityfeed/"></iframe>
+    </div>
 </body>
 </html>
